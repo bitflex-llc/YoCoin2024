@@ -1,0 +1,9 @@
+[Unit]
+Description=yocoin-rpc
+
+[Service]
+ExecStart=geth --ws.api "admin,eth,net,web3,txpool,clique,rpc,network,debug" --ws --ws.port 8546 --ws.origins "*" --http  --http.corsdomain "*" --http.api "admin,eth,net,web3,txpool,clique,rpc,debug,shh" --http.vhosts "*" --networkid 100824 --gcmode=archive  --miner.gasprice=100000000000 --nodiscover
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
