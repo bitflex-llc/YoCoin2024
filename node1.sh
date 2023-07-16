@@ -1,0 +1,1 @@
+geth --mine --networkid 100824 --gcmode=archive --miner.gasprice=100000000000 --nodiscover --datadir node1 --unlock 0x4027236F2f3A22e6cDbad5a48236CE99cC17Cffc --password pw.txt --allow-insecure-unlock
