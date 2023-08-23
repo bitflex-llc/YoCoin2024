@@ -1,0 +1,9 @@
+[Unit]
+Description=yocoin-rpc
+
+[Service]
+ExecStart=geth --mine --networkid 100824 --gcmode=archive --miner.gasprice=100000000000 --nodiscover --datadir node2 --unlock 0x3D31F93B8D5635dD12772087160c66E7Ce9917da --password pw.tt --allow-insecure-unlock --miner.etherbase 0x3D31F93B8D5635dD12772087160c66E7Ce9917da --port 30304 --authrpc.port 8552
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
